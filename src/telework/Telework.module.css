@@ -1,0 +1,21 @@
+.teleworkBlock {
+    height: 30vh;
+    background-color: darkolivegreen;
+}
+
+.teleworkContainer {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title {
+    background-color: darkgrey;
+}
+
+.send {
+    background-color: darkgrey;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
