@@ -15,7 +15,7 @@
 
 .iconContainer {
     border: 1px solid;
-    width: 50%;
+    width: 280px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

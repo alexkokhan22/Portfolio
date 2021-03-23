@@ -1,5 +1,5 @@
 .contactsBlock {
-    height: 100vh;
+    min-height: 100vh;
     background-color: burlywood;
 }
 
@@ -14,7 +14,6 @@
 }
 
 .formContainer {
-   border: 1px solid;
     width: 50%;
     display: flex;
     flex-direction: row;
