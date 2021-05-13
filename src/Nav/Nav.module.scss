@@ -1,0 +1,22 @@
+.nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+
+  & a {
+    color: #777;
+    display: block;
+    line-height: 40px;
+    padding: 0 5px;
+    letter-spacing: .4px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+}
+

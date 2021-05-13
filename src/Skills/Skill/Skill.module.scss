@@ -1,0 +1,45 @@
+.skillBlock {
+  width: 250px;
+  box-shadow: 0 1px 5px #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .title {
+    position: relative;
+
+    & h5 {
+      color: #757575;
+      font-size: 14px;
+      margin: 0 0 15px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      margin-block-start: 1.67em;
+      margin-block-end: 1.67em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+

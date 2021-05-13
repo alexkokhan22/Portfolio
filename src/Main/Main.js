@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Main.module.css"
+import style from "./Main.module.scss"
 import styleContainer from "../common/style/Container.module.css"
 
 
@@ -8,9 +8,9 @@ export function Main() {
         <div className={style.main}>
             <div className={styleContainer.container}>
                 <div className={style.text}>
-                    <span>Hi</span>
-                    <h1>I am Alex</h1>
-                    <p>React developer</p>
+                    <h5>HELLO, MY NAME IS</h5>
+                    <h1>ALEX KOKHAN</h1>
+                    <p>FRONTEND DEVELOPER</p>
                 </div>
                 <div className={style.photo}></div>
             </div>

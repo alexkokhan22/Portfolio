@@ -1,16 +1,18 @@
 import React from "react";
-import style from "./Work.module.css"
-
+import style from "./Work.module.scss"
 
 
 export function Work(props) {
     return (
-        <div className={style.skillBlock}>
-            <div className={style.icon}>
-                <button className={style.watch}>Смотреть</button>
+        <div className={style.workBlock}>
+            <div className={style.icon} style={props.style}>
+                <button className={style.watch}>смотреть</button>
             </div>
-            <h3>{props.title}</h3>
-            <span className={style.description}>{props.description}</span>
+            <div className={style.title}>
+                <h5>{props.title}</h5>
+            </div>
+            <span>{props.description}</span>
         </div>
     )
 }
+

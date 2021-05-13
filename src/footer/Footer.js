@@ -1,23 +1,22 @@
 import React from "react";
-import style from "./Footer.module.css"
+import style from "./Footer.module.scss"
 import styleContainer from "../common/style/Container.module.css";
-import {Form} from "../contacts/form/Form";
 import {Icon} from "./icon/Icon";
-
+import {TitleH2} from "../common/components/title/TitleH2";
+import {faInstagram, faLinkedin, faVk, faYandex} from "@fortawesome/free-brands-svg-icons";
 
 
 export function Footer() {
     return (
         <div className={style.footerBlock}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
-                <h2 className={style.title}>Alex Kokhan</h2>
                 <div className={style.iconContainer}>
-                    <Icon/>
-                    <Icon/>
-                    <Icon/>
-                    <Icon/>
+                    <Icon icon={faVk}/>
+                    <Icon icon={faInstagram}/>
+                    <Icon icon={faLinkedin}/>
+                    <Icon icon={faYandex}/>
                 </div>
-                <span className={style.span}>Все права защищены © 2021</span>
+                <span className={style.span}>All rights reserved © 2021</span>
             </div>
 
 
