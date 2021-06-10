@@ -1,59 +1,25 @@
-import React from "react";
-import style from "./Skills.module.scss"
-import styleContainer from "../common/style/Container.module.css";
-import {Skill} from "./Skill/Skill";
-import {TitleH2} from "../common/components/title/TitleH2";
-import htmlCSS from "../assets/img/bb382732698265.Y3JvcCw3MzksNTc4LDE3MCw3MQ.jpg"
-import js from "../assets/img/kissclipart-javascript-clipart-computer-icons-clip-art-15369d6601ed0d8e.jpg"
-import react from "../assets/img/pngtree-science-icon-png-image_2036775.jpg"
-import redux from "../assets/img/2074158.jpg"
+import React from 'react'
+import styles from './Skills.module.scss';
+import Skill from "./skill/Skill";
+import Title from "../common/components/title/Title";
+import {faBriefcase, faLaptopCode, faTasks} from "@fortawesome/free-solid-svg-icons";
+import {faSketch} from "@fortawesome/free-brands-svg-icons";
 
 
-
-
-export function Skills() {
-    const htmlCssImg = {
-        backgroundImage: `url(${htmlCSS})`
-    };
-
-    const jsImg = {
-        backgroundImage: `url(${js})`
-    };
-
-    const reactImg = {
-        backgroundImage: `url(${react})`
-    };
-
-    const reduxImg = {
-        backgroundImage: `url(${redux})`
-    };
-
+function Skills() {
     return (
-        <div className={style.skillsBlock}>
-            <div className= {`${styleContainer.container} ${style.skillsContainer}`}>
-                <TitleH2 value={'MY Skills'}/>
-                <div className={style.skills}>
-                    <Skill
-                        title={'HTML / CSS'}
-                        style={htmlCssImg}
-                    />
-                    <Skill
-                        title={'JS / TS'}
-                        style={jsImg}
-                    />
-                    <Skill
-                        title={'REACT'}
-                        style={reactImg}
-                    />
-                    <Skill
-                        title={'REDUX'}
-                        style={reduxImg}
-                    />
-
+        <div className={styles.skillsBlock} id='skills'>
+            <div className={styles.skillsContainer}>
+                <Title title={'My Skills'}/>
+                <div className={styles.skills}>
+                    <Skill title={'DEVELOPMENT'} description={"React, Redux, AXIOS etc"} titleIcon={faLaptopCode}/>
+                    <Skill title={'FOUNDATION'} description={"TypeScript, JavaScript, HTML5, CSS3"} titleIcon={faBriefcase}/>
+                    <Skill title={'TESTING'} description={"Unit Tests, SnapShot, Storybook"} titleIcon={faTasks}/>
+                    <Skill title={'DESIGN'} description={"Material UI, Ant-Design etc"} titleIcon={faSketch}/>
                 </div>
             </div>
-
-
         </div>
-    )
+    );
 }
+
+export default Skills

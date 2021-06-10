@@ -1,20 +1,23 @@
-import React from "react";
-import style from "./Contacts.module.scss"
-import styleContainer from "../common/style/Container.module.css";
-import {Form} from "./form/Form";
-import {TitleH2} from "../common/components/title/TitleH2";
+import React from 'react'
+import styles from './Contacts.module.scss';
+import Form from "./form/Form/Form";
+import Title from "../common/components/title/Title";
+import ContactsData from "./form/ContactsData/ContactsData";
 
 
-export function Contacts() {
+function Contacts() {
     return (
-        <div className={style.contactsBlock}>
-            <div className={`${styleContainer.container} ${style.contactsContainer}`}>
-                <TitleH2 value={'Contacts'}/>
-                <div className={style.formContainer}>
+        <div className={styles.contactsBlock} id="contacts">
+            <div className={styles.contactsContainer}>
+                <Title title={'GET IN TOUCH'}/>
+                <div className={styles.formAndData}>
+                    <ContactsData/>
                     <Form/>
                 </div>
-                <button type={"submit"} className={style.send}>SEND MESSAGE</button>
+
             </div>
         </div>
-    )
+    );
 }
+
+export default Contacts;

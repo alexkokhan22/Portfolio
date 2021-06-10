@@ -1,9 +1,6 @@
-@import "src/common/style/scss/variables";
+@import './../common/styles/sass/mixins';
 
 .header {
   height: 80px;
-  background-color: $bgFirstColor;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include flexable(flex-end,center,none);
 }

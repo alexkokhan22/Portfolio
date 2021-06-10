@@ -1,15 +1,19 @@
-import React from "react";
-import style from "./Skill.module.scss"
+import React from 'react'
+import styles from './Skill.module.scss';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
-
-export function Skill(props) {
+function Skill({title, description, titleIcon}) {
     return (
-        <div className={style.skillBlock}>
-            <div className={style.icon} style={props.style}></div>
-            <div className={style.title}>
-                <h5>{props.title}</h5>
+        <div className={styles.skill}>
+            <div className={styles.image}>
+                <FontAwesomeIcon icon={titleIcon} className={styles.icon}/>
             </div>
+            <h5>{title}</h5>
+            <hr className={styles.hR}/>
+            <p>{description}</p>
         </div>
-    )
+    );
 }
+
+export default Skill

@@ -1,34 +1,37 @@
-@import "src/common/style/scss/variables";
+@import './../common/styles/sass/variables';
+@import './../common/styles/sass/mixins';
 
-.footerBlock {
-  background-color: $bgSecondColor;
-
-  .footerContainer {
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .iconContainer {
-      margin-top: 25px;
-      margin-bottom: 10px;
-      width: 50%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+.footerContainer {
+  display: flex;
+  padding: 10px 0;
+  @include container();
+  @media screen and (max-width: 640px) {
+    & {
+      justify-content: center;
     }
+  }
 
-    .span {
-      color: #929292;
-      font-size: 10px;
-      font-family: 'Montserrat', sans-serif;
-      line-height: 19px;
-      font-weight: 400;
-      margin: 25px 0 15px;
+  .copyRightBlock {
+    @include text($textColorFooter, 13px, 400, 19px, normal);
+  }
+
+  ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+
+    a {
+      padding: 0 13px;
+      @include text($textColorFooter, 13px, 400, 19px, normal);
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        color: #000000;
+      }
     }
   }
 }
-
-
 
 
 

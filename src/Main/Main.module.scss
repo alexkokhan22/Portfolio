@@ -1,49 +1,56 @@
-@import "src/common/style/scss/variables";
+@import './../common/styles/sass/variables';
+@import './../common/styles/sass/mixins';
 
-.main {
-  min-height: 100vh;
-  background-color: $bgSecondColor;
 
-  .text {
-    width: 300px;
+.mainBlock {
+  min-height: 90vh;
+  @include flexable(space-between,center,column);
+  .container{
+    @include container();
+  }
+  .greeting {
+    width: 500px;
+    text-align: left;
 
-    & h5 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 16px;
-      color: #919191;
-      letter-spacing: 1px;
+    h1 {
+      @include text($textColorH1,38px,700,40px,normal);
+      text-transform: uppercase;
       margin: 0 0 15px;
-      font-weight: 700;
+      line-height: 1.1;
     }
 
-    & h1 {
-      color: #414141;
-      font-size: 38px;
-      line-height: 28px;
+    h5 {
+      @include text($textColorH5,16px,700,40px, 1px);
       margin: 0 0 15px;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
+      text-transform: uppercase;
     }
 
-    & p {
-      color: #6a6a6a;
-      font-size: 16px;
-      line-height: 28px;
-      font-weight: 400;
+    span{
+      @include text($textColorH5,16px,700,40px, 1px);
       margin: 0 0 15px;
-      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      span{
+        @include text($textColorH5,16px,700,40px, 1px);
+        margin: 0 0 15px;
+        text-transform: uppercase;
+      }
     }
+
   }
 
   .photo {
-    margin-top: 15px;
-    width: 300px;
-    height: 400px;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width:500px;
+
+    img {
+      height: auto;
+      width: 90%;
+      max-width: 720px;
+      margin: 20px 0 20px 0;
+    }
   }
 }
-
 
 
 
